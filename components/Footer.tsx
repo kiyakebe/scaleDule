@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="max-w-7xl mx-auto flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
       <div className="flex items-center space-x-2">
         <Smartphone className="h-5 w-5 text-primary" />
-        <span className="font-semibold">AppName</span>
+        <span className="font-semibold">scaleDule</span>
       </div>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <Link
@@ -30,7 +30,7 @@ const Footer = () => {
         </Link>
       </nav>
       <p className="text-xs text-muted-foreground">
-        © 2025 AppName. All rights reserved.
+        © 2025 scaleDule. All rights reserved.
       </p>
     </footer>
   );
