@@ -17,7 +17,7 @@ const Page = () => {
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="text-gray-600 text-center leading-relaxed">
-            Thank you for signing up! We've sent a verification link to your
+            Thank you for signing up! We&apos;ve sent a verification link to your
             email. Please check your inbox (and spam folder) to confirm your
             account.
           </p>
@@ -33,7 +33,7 @@ const Page = () => {
             <Button asChild variant="outline" className="w-full">
               <Link href="/contact">
                 <HelpCircle className="mr-2 h-4 w-4" />
-                Didn't receive the email? Contact support
+                Didn&apos;t receive the email? Contact support
               </Link>
             </Button>
           </div>
