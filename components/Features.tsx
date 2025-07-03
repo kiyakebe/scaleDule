@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Shield, Smartphone, Users, Zap } from "lucide-react";
+import { ArrowRight, Shield, Smartphone, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 
 const features = [
@@ -7,22 +6,19 @@ const features = [
     title: "Lightning Fast Performance",
     description:
       "Experience blazing fast speeds with our optimized mobile app. Built with cutting-edge technology to deliver instant responses and smooth interactions.",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+    image: "/features/1.png",
   },
   {
     title: "Advanced Security",
     description:
       "Your data is protected with enterprise-grade security. End-to-end encryption ensures your information stays private and secure at all times.",
-    image:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+    image: "/features/2.png",
   },
   {
     title: "Intuitive Design",
     description:
       "Navigate effortlessly with our beautifully crafted interface. Every interaction is designed to be natural, engaging, and delightfully simple.",
-    image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+    image: "/features/3.png",
   },
 ];
 
@@ -72,11 +68,11 @@ const Features = () => {
               </div>
               <div className="flex-1">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl blur-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                   <img
                     src={feature.image}
                     alt={feature.title}
-                    className="relative w-full rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                    className="relative w-full rounded-2xl hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>

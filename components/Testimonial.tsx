@@ -3,24 +3,24 @@ import { Card, CardContent } from "./ui/card";
 import { Star } from "lucide-react";
 
 const testimonials = [
-    {
-        quote:
-            "This app has transformed the way I manage my daily tasks! The interface is incredibly intuitive and the performance is outstanding.",
-        author: "Sarah Johnson",
-        role: "Product Manager",
-    },
-    {
-        quote:
-            "Incredibly powerful yet simple to use. The security features give me peace of mind while the speed keeps me productive.",
-        author: "Michael Chen",
-        role: "Software Developer",
-    },
-    {
-        quote:
-            "LaunchApp has been a game-changer for our team. Collaboration has never been easier, and the support team is fantastic!",
-        author: "Emily Davis",
-        role: "Team Lead",
-    },
+  {
+    quote:
+      "This app has transformed the way I manage my daily tasks! The interface is incredibly intuitive and the performance is outstanding.",
+    author: "Sarah Johnson",
+    role: "Product Manager",
+  },
+  {
+    quote:
+      "Incredibly powerful yet simple to use. The security features give me peace of mind while the speed keeps me productive.",
+    author: "Michael Chen",
+    role: "Software Developer",
+  },
+  {
+    quote:
+      "LaunchApp has been a game-changer for our team. Collaboration has never been easier, and the support team is fantastic!",
+    author: "Emily Davis",
+    role: "Team Lead",
+  },
 ];
 
 const Testimonial = () => {
@@ -52,7 +52,7 @@ const Testimonial = () => {
                   ))}
                 </div>
                 <blockquote className="text-lg text-gray-700 mb-6 italic">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div>
                   <div className="font-semibold text-gray-900">

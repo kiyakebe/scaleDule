@@ -6,7 +6,7 @@ import { Badge } from "./ui/badge";
 
 const Hero = () => {
   return (
-    <section className="relative py-12 md:py-24 lg:py-32 xl:py-48 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 md:py-24  px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-3xl opacity-20"></div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -44,17 +44,13 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-3xl"></div>
-              <Image
-                src="/placeholder.svg?height=600&width=300"
-                width="300"
-                height="600"
-                alt="Mobile app screenshot"
-                className="relative rounded-3xl shadow-2xl border-8 border-gray-200 dark:border-gray-800"
-              />
-            </div>
+          <div className="flex items-center justify-center relative">
+            <Image
+              src="/hero.png?height=900&width=900"
+              width="900"
+              height="900"
+              alt="Mobile app screenshot"
+            />
           </div>
         </div>
       </div>
