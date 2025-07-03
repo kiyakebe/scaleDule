@@ -9,16 +9,16 @@ const Hero = () => {
     <section className="relative py-12 md:py-24 lg:py-32 xl:py-48 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-3xl opacity-20"></div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-          <div className="">
+          <div className="space-y-6 lg:space-y-8 flex flex-col justify-center">
             <Badge variant="secondary" className="w-fit">
               🚀 Now Available
             </Badge>
             <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
               Launch Your Future with
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                NextGen App
+                scaleDule App
               </span>
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">

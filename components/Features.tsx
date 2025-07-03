@@ -1,66 +1,87 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Users, Zap } from "lucide-react";
+import { ArrowRight, Shield, Smartphone, Users, Zap } from "lucide-react";
+import { Button } from "./ui/button";
+
+const features = [
+  {
+    title: "Lightning Fast Performance",
+    description:
+      "Experience blazing fast speeds with our optimized mobile app. Built with cutting-edge technology to deliver instant responses and smooth interactions.",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Advanced Security",
+    description:
+      "Your data is protected with enterprise-grade security. End-to-end encryption ensures your information stays private and secure at all times.",
+    image:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Intuitive Design",
+    description:
+      "Navigate effortlessly with our beautifully crafted interface. Every interaction is designed to be natural, engaging, and delightfully simple.",
+    image:
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
+  },
+];
 
 const Features = () => {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="features" className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Powerful Features Built for You
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Experience the next generation of mobile productivity with features
-            designed to enhance your daily workflow.
+            designed to enhance your workflow.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Zap className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Lightning Fast
-              </h3>
-              <p className="text-gray-600">
-                Experience blazing-fast performance with our optimized
-                architecture, delivering instant responses and seamless
-                interactions.
-              </p>
-            </CardContent>
-          </Card>
 
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="h-8 w-8 text-white" />
+        <div className="space-y-24">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`flex flex-col ${
+                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              } items-center gap-12 lg:gap-16`}
+            >
+              <div className="flex-1 space-y-6">
+                <div className="flex items-center space-x-3">
+                  {index === 0 && <Zap className="h-8 w-8 text-blue-600" />}
+                  {index === 1 && <Shield className="h-8 w-8 text-blue-600" />}
+                  {index === 2 && (
+                    <Smartphone className="h-8 w-8 text-blue-600" />
+                  )}
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                    {feature.title}
+                  </h3>
+                </div>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-2 hover:bg-blue-50 hover:border-blue-600"
+                >
+                  Learn More
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Secure & Private
-              </h3>
-              <p className="text-gray-600">
-                Your data is protected with enterprise-grade security and
-                end-to-end encryption, ensuring complete privacy and peace of
-                mind.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="h-8 w-8 text-white" />
+              <div className="flex-1">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl blur-2xl"></div>
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="relative w-full rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Collaborative
-              </h3>
-              <p className="text-gray-600">
-                Work together seamlessly with real-time collaboration features
-                and intuitive sharing capabilities for teams of any size.
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+          ))}
         </div>
       </div>
     </section>
